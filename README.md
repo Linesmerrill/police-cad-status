@@ -1,6 +1,6 @@
 # [📈 Live Status](https://Linesmerrill.github.io/police-cad-status): <!--live status--> **🟩 All systems operational**
 
-This repository contains the open-source uptime monitor and status page for [Merrill Lines](https://linesmerrill.github.io/MerrillLines/), powered by [Upptime](https://github.com/upptime/upptime).
+This repository contains the open-source uptime monitor and status page for [Lines Police CAD](https://www.linespolice-cad.com), powered by [Upptime](https://github.com/upptime/upptime).
 
 [![Uptime CI](https://github.com/Linesmerrill/police-cad-status/workflows/Uptime%20CI/badge.svg)](https://github.com/Linesmerrill/police-cad-status/actions?query=workflow%3A%22Uptime+CI%22)
 [![Response Time CI](https://github.com/Linesmerrill/police-cad-status/workflows/Response%20Time%20CI/badge.svg)](https://github.com/Linesmerrill/police-cad-status/actions?query=workflow%3A%22Response+Time+CI%22)
