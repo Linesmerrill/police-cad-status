@@ -11,7 +11,7 @@ status-website:
   cname: status.linespolice-cad.com
   name: Lines Police CAD Status
   introTitle: "**Lines Police CAD** service status and uptime monitor."
-  introMessage: This page shows real-time availability and response time data for Lines Police CAD services. Powered by [Upptime](https://github.com/upptime/upptime).
+  introMessage: This page shows real-time availability and response time data for Lines Police CAD services.
   theme: dark
   navbar:
     - title: Status
@@ -22,5 +22,3 @@ status-website:
       href: https://discord.gg/Y9ytW2ZMp4
     - title: Report a Bug
       href: https://github.com/Linesmerrill/police-cad/issues/new?assignees=&labels=&template=bug_report.md&title=
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
