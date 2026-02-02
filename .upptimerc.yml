@@ -18,5 +18,9 @@ status-website:
       href: /
     - title: Lines Police CAD
       href: https://www.linespolice-cad.com
+    - title: Discord Support
+      href: https://discord.gg/Y9ytW2ZMp4
+    - title: Report a Bug
+      href: https://github.com/Linesmerrill/police-cad/issues/new?assignees=&labels=&template=bug_report.md&title=
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
