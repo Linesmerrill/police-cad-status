@@ -8,7 +8,7 @@ sites:
     url: https://police-cad-app-api-bc6d659b60b3.herokuapp.com
 
 status-website:
-  baseUrl: /police-cad-status
+  cname: status.linespolice-cad.com
   name: Lines Police CAD Status
   introTitle: "**Lines Police CAD** service status and uptime monitor."
   introMessage: This page shows real-time availability and response time data for Lines Police CAD services. Powered by [Upptime](https://github.com/upptime/upptime).
