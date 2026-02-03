@@ -3,6 +3,8 @@ repo: police-cad-status
 
 workflowSchedule:
   staticSite: "0 * * * *"  # Rebuild status page every hour
+  responseTime: "0 * * * *"  # Record response time data every hour
+  graphs: "0 * * * *"  # Regenerate graphs every hour
   updateTemplate: "0 0 1 1 *"  # Disable auto-updates to preserve site.yml fix
 
 sites:
