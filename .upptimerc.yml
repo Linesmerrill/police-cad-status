@@ -6,7 +6,7 @@ workflowSchedule:
 
 sites:
   - name: Police CAD Frontend
-    url: https://www.linespolice-cad.com
+    url: https://www.linespolice-cad.com/health
   - name: Police CAD API
     url: https://police-cad-app-api-bc6d659b60b3.herokuapp.com
 
