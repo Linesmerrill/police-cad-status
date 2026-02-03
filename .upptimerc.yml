@@ -1,6 +1,9 @@
 owner: Linesmerrill
 repo: police-cad-status
 
+workflowSchedule:
+  staticSite: "0 * * * *"  # Rebuild status page every hour
+
 sites:
   - name: Police CAD Frontend
     url: https://www.linespolice-cad.com
