@@ -3,6 +3,7 @@ repo: police-cad-status
 
 workflowSchedule:
   staticSite: "0 * * * *"  # Rebuild status page every hour
+  updateTemplate: "0 0 1 1 *"  # Disable auto-updates to preserve site.yml fix
 
 sites:
   - name: Police CAD Frontend
