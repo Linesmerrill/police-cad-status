@@ -2,9 +2,9 @@ owner: Linesmerrill
 repo: police-cad-status
 
 workflowSchedule:
-  staticSite: "0 * * * *"  # Rebuild status page every hour
-  responseTime: "0 * * * *"  # Record response time data every hour
-  graphs: "0 * * * *"  # Regenerate graphs every hour
+  staticSite: "0 2 * * *"  # Rebuild status page daily at 2 AM UTC
+  responseTime: "0 3 * * *"  # Record response time data daily at 3 AM UTC
+  graphs: "0 4 * * *"  # Regenerate graphs daily at 4 AM UTC
   updateTemplate: "0 0 1 1 *"  # Disable auto-updates to preserve site.yml fix
 
 sites:
