@@ -5,17 +5,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.linespolice-cad.com.ico",
     "slug": "police-cad-frontend",
     "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 414,
-    "timeDay": 234,
-    "timeWeek": 196,
-    "timeMonth": 210,
-    "timeYear": 414,
-    "dailyMinutesDown": {}
+    "uptime": "99.99%",
+    "uptimeDay": "99.53%",
+    "uptimeWeek": "99.93%",
+    "uptimeMonth": "99.98%",
+    "uptimeYear": "99.99%",
+    "time": 413,
+    "timeDay": 190,
+    "timeWeek": 200,
+    "timeMonth": 209,
+    "timeYear": 413,
+    "dailyMinutesDown": {
+      "2026-04-13": 7
+    }
   },
   {
     "name": "Police CAD API",
@@ -29,9 +31,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 178,
-    "timeDay": 222,
-    "timeWeek": 158,
-    "timeMonth": 200,
+    "timeDay": 86,
+    "timeWeek": 153,
+    "timeMonth": 193,
     "timeYear": 178,
     "dailyMinutesDown": {}
   }
