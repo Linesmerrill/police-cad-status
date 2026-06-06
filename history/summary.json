@@ -25,19 +25,19 @@
     "url": "https://police-cad-app-api-bc6d659b60b3.herokuapp.com",
     "icon": "https://icons.duckduckgo.com/ip3/police-cad-app-api-bc6d659b60b3.herokuapp.com.ico",
     "slug": "police-cad-api",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 177,
-    "timeDay": 185,
-    "timeWeek": 187,
-    "timeMonth": 167,
-    "timeYear": 177,
+    "status": "up",
+    "uptime": "99.98%",
+    "uptimeDay": "97.54%",
+    "uptimeWeek": "99.65%",
+    "uptimeMonth": "99.92%",
+    "uptimeYear": "99.98%",
+    "time": 176,
+    "timeDay": 116,
+    "timeWeek": 169,
+    "timeMonth": 163,
+    "timeYear": 176,
     "dailyMinutesDown": {
-      "2026-06-06": 0
+      "2026-06-06": 35
     }
   }
 ]
