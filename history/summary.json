@@ -11,9 +11,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
     "time": 381,
-    "timeDay": 159,
-    "timeWeek": 200,
-    "timeMonth": 186,
+    "timeDay": 185,
+    "timeWeek": 213,
+    "timeMonth": 183,
     "timeYear": 381,
     "dailyMinutesDown": {
       "2026-04-20": 47,
@@ -25,17 +25,19 @@
     "url": "https://police-cad-app-api-bc6d659b60b3.herokuapp.com",
     "icon": "https://icons.duckduckgo.com/ip3/police-cad-app-api-bc6d659b60b3.herokuapp.com.ico",
     "slug": "police-cad-api",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 177,
-    "timeDay": 43,
-    "timeWeek": 168,
-    "timeMonth": 169,
+    "timeDay": 185,
+    "timeWeek": 187,
+    "timeMonth": 167,
     "timeYear": 177,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-06-06": 0
+    }
   }
 ]
