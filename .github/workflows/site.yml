@@ -16,11 +16,17 @@
 
 name: Static Site CI
 on:
+  push:
+    paths:
+      - "assets/**"
   schedule:
     - cron: "0 2 * * *"
   repository_dispatch:
     types: [static_site]
   workflow_dispatch:
+concurrency:
+  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
+  cancel-in-progress: false
 jobs:
   release:
     name: Build and deploy site
@@ -28,7 +34,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ secrets.GH_PAT || github.token }}

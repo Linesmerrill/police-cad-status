@@ -22,13 +22,16 @@ on:
   repository_dispatch:
     types: [setup]
   workflow_dispatch:
+concurrency:
+  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
+  cancel-in-progress: false
 jobs:
   release:
     name: Setup Upptime
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ secrets.GH_PAT || github.token }}
@@ -53,10 +56,24 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Generate graphs
+        id: dispatch_graphs
         uses: benc-uk/workflow-dispatch@v1
+        continue-on-error: true
         with:
           workflow: Graphs CI
           token: ${{ secrets.GH_PAT || github.token }}
+      - name: Setup Node.js for direct graph generation
+        if: steps.dispatch_graphs.outcome == 'failure'
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+      - name: Generate graphs directly if dispatch fails
+        if: steps.dispatch_graphs.outcome == 'failure'
+        uses: upptime/uptime-monitor@v1.43.14
+        with:
+          command: "graphs"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Generate site
         uses: upptime/uptime-monitor@v1.43.14
         with:
