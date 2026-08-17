@@ -5,7 +5,15 @@ workflowSchedule:
   staticSite: "0 2 * * *"  # Rebuild status page daily at 2 AM UTC
   responseTime: "0 3 * * *"  # Record response time data daily at 3 AM UTC
   graphs: "0 4 * * *"  # Regenerate graphs daily at 4 AM UTC
-  updateTemplate: "0 0 1 1 *"  # Disable auto-updates to preserve site.yml fix
+  updateTemplate: "0 5 * * 1"  # Track upstream weekly so the pinned action can't go stale
+
+# Allowlist of GitHub secrets exposed to the Upptime action as SECRETS_CONTEXT.
+# Empty because this repo configures no notification providers and no site URL
+# references a secret. Never replace the generated SECRETS_CONTEXT with
+# `toJson(secrets)` — that hands every repo secret to a third-party action and
+# GitHub's workflow scanner will (correctly) flag it as malicious.
+# To add e.g. Discord alerts, add NOTIFICATION_DISCORD_WEBHOOK_URL here.
+secrets: []
 
 sites:
   - name: Police CAD Frontend
