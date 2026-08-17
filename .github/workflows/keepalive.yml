@@ -11,8 +11,11 @@ on:
   schedule:
     - cron: "0 12 * * 1" # Every Monday at 12:00 UTC
   workflow_dispatch:
+# Deliberately NOT the shared "-upptime" concurrency group. Queueing into that
+# group lets this workflow cancel a pending Upptime run (GitHub drops the older
+# pending run when a newer one queues), which would drop real monitoring checks.
 concurrency:
-  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
+  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-keepalive
   cancel-in-progress: false
 jobs:
   keepalive:
