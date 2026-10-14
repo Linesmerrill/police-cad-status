@@ -20,6 +20,13 @@ sites:
     url: https://www.linespolice-cad.com/health
   - name: Police CAD API
     url: https://police-cad-app-api-bc6d659b60b3.herokuapp.com
+  # The bot runs on a volunteer's machine, so it can go down without anyone
+  # noticing. It posts a heartbeat to the API every 60 seconds while its Discord
+  # gateway is live; this endpoint answers 503 once those beats stop. Upptime
+  # checks every 5 minutes (GitHub Actions' minimum) and is the public record.
+  # Faster detection and the Discord alert come from the API's own 1-minute job.
+  - name: Discord Bot
+    url: https://police-cad-app-api-bc6d659b60b3.herokuapp.com/health/discord-bot
 
 status-website:
   cname: status.linespolice-cad.com
