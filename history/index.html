@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../styles.css?v=1792096250655">
+<link rel="stylesheet" href="../styles.css?v=1792097147329">
 <script>
   // Applied before the first paint so a dark-mode visitor never sees a white
   // flash. The page follows the system setting until someone picks a side.
@@ -186,6 +186,25 @@
     });
     dark.addEventListener("change", label);
     label();
+  })();
+
+  // A dropdown left open follows the usual rule: clicking away, or Escape,
+  // closes it. Only the filter, never the "show all" disclosures, which are
+  // content someone opened deliberately.
+  (function () {
+    function closeAll() {
+      document.querySelectorAll("details.filter[open]").forEach(function (d) {
+        d.open = false;
+      });
+    }
+    document.addEventListener("click", function (event) {
+      document.querySelectorAll("details.filter[open]").forEach(function (d) {
+        if (!d.contains(event.target)) d.open = false;
+      });
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeAll();
+    });
   })();
 
   // One tooltip, moved to whichever bar is under the pointer. The text is on
