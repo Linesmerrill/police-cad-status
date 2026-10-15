@@ -654,6 +654,25 @@ function layout({ config, generatedAt, base, title, description, markLevel, body
     label();
   })();
 
+  // A dropdown left open follows the usual rule: clicking away, or Escape,
+  // closes it. Only the filter, never the "show all" disclosures, which are
+  // content someone opened deliberately.
+  (function () {
+    function closeAll() {
+      document.querySelectorAll("details.filter[open]").forEach(function (d) {
+        d.open = false;
+      });
+    }
+    document.addEventListener("click", function (event) {
+      document.querySelectorAll("details.filter[open]").forEach(function (d) {
+        if (!d.contains(event.target)) d.open = false;
+      });
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeAll();
+    });
+  })();
+
   // One tooltip, moved to whichever bar is under the pointer. The text is on
   // the bar itself, so this only positions and shows it; a bar near an edge is
   // nudged back inside the viewport rather than hanging off it.
