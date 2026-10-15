@@ -57,8 +57,8 @@ function readHistoryFile(slug) {
 function readConfig() {
   // Only the two fields the page needs, read the same forgiving way.
   const text = readFileSync(join(root, ".upptimerc.yml"), "utf8");
-  const cname = /cname:\s*(\S+)/.exec(text);
-  const name = /name:\s*(.+)/.exec(text.slice(text.indexOf("status-website:")));
+  const cname = /^\s*cname:\s*(\S+)/m.exec(text);
+  const name = /^\s*name:\s*(.+)$/m.exec(text.slice(text.indexOf("status-website:")));
   return {
     cname: cname ? cname[1] : "status.linespolice-cad.com",
     name: name ? name[1].trim() : "Lines Police CAD Status",
