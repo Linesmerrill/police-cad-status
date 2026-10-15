@@ -590,7 +590,7 @@ function layout({ config, generatedAt, base, title, description, markLevel, body
 <header class="masthead">
   <div class="wrap masthead-inner">
     <a class="brand" href="${base}">
-      <img class="brand-logo" src="${base}assets/lpc-logo.png" alt="" width="30" height="30">
+      <img class="brand-logo" src="${base}assets/lpc-logo.png" alt="" width="40" height="40">
       <span class="brand-name">Lines Police CAD <span>Status</span></span>
       <span class="brand-dot mark-${markLevel}" aria-hidden="true"></span>
     </a>
