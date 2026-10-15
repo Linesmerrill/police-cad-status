@@ -46,18 +46,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/police-cad-app-api-bc6d659b60b3.herokuapp.com.ico",
     "slug": "discord-bot",
     "status": "down",
-    "uptime": "0.39%",
-    "uptimeDay": "0.39%",
-    "uptimeWeek": "0.39%",
-    "uptimeMonth": "0.39%",
-    "uptimeYear": "0.39%",
+    "uptime": "78.36%",
+    "uptimeDay": "78.36%",
+    "uptimeWeek": "78.36%",
+    "uptimeMonth": "78.36%",
+    "uptimeYear": "78.36%",
     "time": 75,
     "timeDay": 75,
     "timeWeek": 75,
     "timeMonth": 75,
     "timeYear": 75,
     "dailyMinutesDown": {
-      "2026-10-14": 52
+      "2026-10-14": 145
     }
   }
 ]
