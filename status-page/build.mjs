@@ -13,9 +13,11 @@
 // So the checks, the alerting and the incident record are untouched; only the
 // page a customer sees is ours.
 //
+// Lives outside site/, which Upptime's own site command creates and owns.
+//
 // Usage:
-//   node site/build.mjs            # writes site/dist
-//   GITHUB_TOKEN=... node site/build.mjs
+//   node status-page/build.mjs     # writes status-page/dist
+//   GITHUB_TOKEN=... node status-page/build.mjs
 //
 // Without a token the page still builds, with the incident list omitted rather
 // than silently shown as empty. No dependencies: this runs on a bare Node.
@@ -483,5 +485,5 @@ writeFileSync(join(outDir, ".nojekyll"), "");
 
 const built = readdirSync(outDir).join(", ");
 console.log(
-  `built ${sites.length} service(s), ${incidents === null ? "no" : incidents.length} incident(s) in the last ${INCIDENT_DAYS} days -> site/dist (${built})`,
+  `built ${sites.length} service(s), ${incidents === null ? "no" : incidents.length} incident(s) in the last ${INCIDENT_DAYS} days -> status-page/dist (${built})`,
 );
