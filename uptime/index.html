@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Historical uptime</title>
+<meta name="description" content="Month by month uptime for every Lines Police CAD service.">
+<meta name="theme-color" content="#faf9f5">
+<meta property="og:title" content="Historical uptime">
+<meta property="og:description" content="Month by month uptime for every Lines Police CAD service.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/lpc-logo.png">
+<link rel="apple-touch-icon" href="../assets/lpc-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css?v=1792096135693">
+<script>
+  // Applied before the first paint so a dark-mode visitor never sees a white
+  // flash. The page follows the system setting until someone picks a side.
+  try {
+    var saved = localStorage.getItem("lpc-status-theme");
+    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to service status</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="../">
+      <img class="brand-logo" src="../assets/lpc-logo.png" alt="" width="40" height="40">
+      <span class="brand-name">Lines Police CAD <span>Status</span></span>
+      <span class="brand-dot mark-up" aria-hidden="true"></span>
+    </a>
+    <nav class="masthead-nav">
+      <a href="https://www.linespolice-cad.com">Main site</a>
+      <a class="btn" href="https://discord.gg/Y9ytW2ZMp4">Discord support</a>
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.3 5.3l1.9 1.9M16.8 16.8l1.9 1.9M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.4 8.4 0 1 0 10.4 10.4z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap">
+    <a class="back" href="../">Current status</a>
+    
+    <nav class="tabs">
+      <a class="tab" href="../history/">Incidents</a>
+      <a class="tab tab-on" href="../uptime/" aria-current="page">Uptime</a>
+    </nav>
+
+    <div class="controls">
+      <label class="field">
+        <span class="sr-only">Service</span>
+        <select id="service">
+          <option value="police-cad-frontend">Police CAD Frontend</option>
+          <option value="police-cad-api">Police CAD API</option>
+          <option value="discord-bot">Discord Bot</option>
+        </select>
+      </label>
+      <div class="window-nav">
+        <button type="button" id="older" aria-label="Earlier months">&#8249;</button>
+        <span id="window-label"></span>
+        <button type="button" id="newer" aria-label="Later months">&#8250;</button>
+      </div>
+    </div>
+
+    <div id="months" class="months"></div>
+
+    <noscript>
+      <p class="muted">This view needs JavaScript. Each service's own page has its uptime and incidents without it:
+      <a href="../service/police-cad-frontend/">Police CAD Frontend</a>, <a href="../service/police-cad-api/">Police CAD API</a>, <a href="../service/discord-bot/">Discord Bot</a>.</p>
+    </noscript>
+
+    <script id="uptime-data" type="application/json">{"months":["2026-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09","2026-10"],"services":[{"slug":"police-cad-frontend","name":"Police CAD Frontend","days":{"2026-02-02":0,"2026-02-03":0,"2026-02-04":0,"2026-02-05":0,"2026-02-06":0,"2026-02-07":0,"2026-02-08":0,"2026-02-09":0,"2026-02-10":0,"2026-02-11":0,"2026-02-12":0,"2026-02-13":0,"2026-02-14":0,"2026-02-15":0,"2026-02-16":0,"2026-02-17":0,"2026-02-18":0,"2026-02-19":0,"2026-02-20":0,"2026-02-21":0,"2026-02-22":0,"2026-02-23":0,"2026-02-24":0,"2026-02-25":0,"2026-02-26":0,"2026-02-27":0,"2026-02-28":0,"2026-03-01":0,"2026-03-02":0,"2026-03-03":0,"2026-03-04":0,"2026-03-05":0,"2026-03-06":0,"2026-03-07":0,"2026-03-08":0,"2026-03-09":0,"2026-03-10":0,"2026-03-11":0,"2026-03-12":0,"2026-03-13":0,"2026-03-14":0,"2026-03-15":0,"2026-03-16":0,"2026-03-17":0,"2026-03-18":0,"2026-03-19":0,"2026-03-20":0,"2026-03-21":0,"2026-03-22":0,"2026-03-23":0,"2026-03-24":0,"2026-03-25":0,"2026-03-26":0,"2026-03-27":0,"2026-03-28":0,"2026-03-29":0,"2026-03-30":0,"2026-03-31":0,"2026-04-01":0,"2026-04-02":0,"2026-04-03":0,"2026-04-04":0,"2026-04-05":0,"2026-04-06":0,"2026-04-07":0,"2026-04-08":0,"2026-04-09":0,"2026-04-10":0,"2026-04-11":0,"2026-04-12":0,"2026-04-13":7,"2026-04-14":0,"2026-04-15":0,"2026-04-16":0,"2026-04-17":0,"2026-04-18":0,"2026-04-19":0,"2026-04-20":47,"2026-04-21":0,"2026-04-22":0,"2026-04-23":0,"2026-04-24":0,"2026-04-25":0,"2026-04-26":0,"2026-04-27":0,"2026-04-28":0,"2026-04-29":0,"2026-04-30":0,"2026-05-01":0,"2026-05-02":0,"2026-05-03":0,"2026-05-04":0,"2026-05-05":0,"2026-05-06":0,"2026-05-07":0,"2026-05-08":0,"2026-05-09":0,"2026-05-10":0,"2026-05-11":0,"2026-05-12":0,"2026-05-13":0,"2026-05-14":0,"2026-05-15":0,"2026-05-16":0,"2026-05-17":0,"2026-05-18":0,"2026-05-19":0,"2026-05-20":0,"2026-05-21":0,"2026-05-22":0,"2026-05-23":0,"2026-05-24":0,"2026-05-25":0,"2026-05-26":0,"2026-05-27":0,"2026-05-28":0,"2026-05-29":0,"2026-05-30":0,"2026-05-31":0,"2026-06-01":0,"2026-06-02":0,"2026-06-03":0,"2026-06-04":0,"2026-06-05":0,"2026-06-06":0,"2026-06-07":0,"2026-06-08":0,"2026-06-09":0,"2026-06-10":0,"2026-06-11":0,"2026-06-12":0,"2026-06-13":0,"2026-06-14":0,"2026-06-15":0,"2026-06-16":0,"2026-06-17":0,"2026-06-18":0,"2026-06-19":0,"2026-06-20":0,"2026-06-21":0,"2026-06-22":0,"2026-06-23":0,"2026-06-24":0,"2026-06-25":0,"2026-06-26":0,"2026-06-27":0,"2026-06-28":0,"2026-06-29":0,"2026-06-30":0,"2026-07-01":0,"2026-07-02":0,"2026-07-03":0,"2026-07-04":0,"2026-07-05":0,"2026-07-06":0,"2026-07-07":0,"2026-07-08":0,"2026-07-09":0,"2026-07-10":0,"2026-07-11":0,"2026-07-12":0,"2026-07-13":0,"2026-07-14":0,"2026-07-15":0,"2026-07-16":0,"2026-07-17":0,"2026-07-18":0,"2026-07-19":0,"2026-07-20":0,"2026-07-21":0,"2026-07-22":0,"2026-07-23":0,"2026-07-24":0,"2026-07-25":0,"2026-07-26":0,"2026-07-27":0,"2026-07-28":0,"2026-07-29":0,"2026-07-30":0,"2026-07-31":0,"2026-08-01":0,"2026-08-02":0,"2026-08-03":0,"2026-08-04":0,"2026-08-05":0,"2026-08-06":0,"2026-08-07":0,"2026-08-08":0,"2026-08-09":0,"2026-08-10":0,"2026-08-11":0,"2026-08-12":0,"2026-08-13":0,"2026-08-14":0,"2026-08-15":0,"2026-08-16":0,"2026-08-17":0,"2026-08-18":0,"2026-08-19":0,"2026-08-20":0,"2026-08-21":0,"2026-08-22":0,"2026-08-23":0,"2026-08-24":0,"2026-08-25":0,"2026-08-26":0,"2026-08-27":0,"2026-08-28":0,"2026-08-29":0,"2026-08-30":0,"2026-08-31":0,"2026-09-01":0,"2026-09-02":0,"2026-09-03":0,"2026-09-04":0,"2026-09-05":0,"2026-09-06":0,"2026-09-07":0,"2026-09-08":0,"2026-09-09":0,"2026-09-10":0,"2026-09-11":0,"2026-09-12":0,"2026-09-13":0,"2026-09-14":0,"2026-09-15":0,"2026-09-16":0,"2026-09-17":0,"2026-09-18":0,"2026-09-19":0,"2026-09-20":0,"2026-09-21":0,"2026-09-22":0,"2026-09-23":0,"2026-09-24":0,"2026-09-25":0,"2026-09-26":0,"2026-09-27":0,"2026-09-28":0,"2026-09-29":0,"2026-09-30":0,"2026-10-01":0,"2026-10-02":0,"2026-10-03":0,"2026-10-04":0,"2026-10-05":0,"2026-10-06":0,"2026-10-07":0,"2026-10-08":0,"2026-10-09":0,"2026-10-10":0,"2026-10-11":0,"2026-10-12":0,"2026-10-13":0,"2026-10-14":0,"2026-10-15":0}},{"slug":"police-cad-api","name":"Police CAD API","days":{"2026-02-02":0,"2026-02-03":0,"2026-02-04":0,"2026-02-05":0,"2026-02-06":0,"2026-02-07":0,"2026-02-08":0,"2026-02-09":0,"2026-02-10":0,"2026-02-11":0,"2026-02-12":0,"2026-02-13":0,"2026-02-14":0,"2026-02-15":0,"2026-02-16":0,"2026-02-17":0,"2026-02-18":0,"2026-02-19":0,"2026-02-20":0,"2026-02-21":0,"2026-02-22":0,"2026-02-23":0,"2026-02-24":0,"2026-02-25":0,"2026-02-26":0,"2026-02-27":0,"2026-02-28":0,"2026-03-01":0,"2026-03-02":0,"2026-03-03":0,"2026-03-04":0,"2026-03-05":0,"2026-03-06":0,"2026-03-07":0,"2026-03-08":0,"2026-03-09":0,"2026-03-10":0,"2026-03-11":0,"2026-03-12":0,"2026-03-13":0,"2026-03-14":0,"2026-03-15":0,"2026-03-16":0,"2026-03-17":0,"2026-03-18":0,"2026-03-19":0,"2026-03-20":0,"2026-03-21":0,"2026-03-22":0,"2026-03-23":0,"2026-03-24":0,"2026-03-25":0,"2026-03-26":0,"2026-03-27":0,"2026-03-28":0,"2026-03-29":0,"2026-03-30":0,"2026-03-31":0,"2026-04-01":0,"2026-04-02":0,"2026-04-03":0,"2026-04-04":0,"2026-04-05":0,"2026-04-06":0,"2026-04-07":0,"2026-04-08":0,"2026-04-09":0,"2026-04-10":0,"2026-04-11":0,"2026-04-12":0,"2026-04-13":0,"2026-04-14":0,"2026-04-15":0,"2026-04-16":0,"2026-04-17":0,"2026-04-18":0,"2026-04-19":0,"2026-04-20":0,"2026-04-21":0,"2026-04-22":0,"2026-04-23":0,"2026-04-24":0,"2026-04-25":0,"2026-04-26":0,"2026-04-27":0,"2026-04-28":0,"2026-04-29":0,"2026-04-30":0,"2026-05-01":0,"2026-05-02":0,"2026-05-03":0,"2026-05-04":0,"2026-05-05":0,"2026-05-06":0,"2026-05-07":0,"2026-05-08":0,"2026-05-09":0,"2026-05-10":0,"2026-05-11":0,"2026-05-12":0,"2026-05-13":0,"2026-05-14":0,"2026-05-15":0,"2026-05-16":0,"2026-05-17":0,"2026-05-18":0,"2026-05-19":0,"2026-05-20":0,"2026-05-21":0,"2026-05-22":0,"2026-05-23":0,"2026-05-24":0,"2026-05-25":0,"2026-05-26":0,"2026-05-27":0,"2026-05-28":0,"2026-05-29":0,"2026-05-30":0,"2026-05-31":0,"2026-06-01":0,"2026-06-02":0,"2026-06-03":0,"2026-06-04":0,"2026-06-05":0,"2026-06-06":35,"2026-06-07":0,"2026-06-08":0,"2026-06-09":0,"2026-06-10":0,"2026-06-11":0,"2026-06-12":0,"2026-06-13":0,"2026-06-14":0,"2026-06-15":0,"2026-06-16":0,"2026-06-17":0,"2026-06-18":0,"2026-06-19":0,"2026-06-20":0,"2026-06-21":0,"2026-06-22":0,"2026-06-23":0,"2026-06-24":0,"2026-06-25":0,"2026-06-26":0,"2026-06-27":0,"2026-06-28":0,"2026-06-29":0,"2026-06-30":0,"2026-07-01":0,"2026-07-02":0,"2026-07-03":0,"2026-07-04":0,"2026-07-05":0,"2026-07-06":0,"2026-07-07":0,"2026-07-08":0,"2026-07-09":0,"2026-07-10":0,"2026-07-11":0,"2026-07-12":0,"2026-07-13":0,"2026-07-14":0,"2026-07-15":0,"2026-07-16":0,"2026-07-17":0,"2026-07-18":0,"2026-07-19":0,"2026-07-20":0,"2026-07-21":0,"2026-07-22":0,"2026-07-23":0,"2026-07-24":0,"2026-07-25":0,"2026-07-26":0,"2026-07-27":0,"2026-07-28":0,"2026-07-29":0,"2026-07-30":0,"2026-07-31":0,"2026-08-01":0,"2026-08-02":0,"2026-08-03":0,"2026-08-04":0,"2026-08-05":0,"2026-08-06":0,"2026-08-07":0,"2026-08-08":0,"2026-08-09":0,"2026-08-10":0,"2026-08-11":0,"2026-08-12":0,"2026-08-13":0,"2026-08-14":0,"2026-08-15":0,"2026-08-16":0,"2026-08-17":0,"2026-08-18":0,"2026-08-19":0,"2026-08-20":0,"2026-08-21":0,"2026-08-22":0,"2026-08-23":0,"2026-08-24":0,"2026-08-25":0,"2026-08-26":0,"2026-08-27":0,"2026-08-28":0,"2026-08-29":0,"2026-08-30":0,"2026-08-31":0,"2026-09-01":0,"2026-09-02":0,"2026-09-03":0,"2026-09-04":0,"2026-09-05":0,"2026-09-06":0,"2026-09-07":0,"2026-09-08":0,"2026-09-09":0,"2026-09-10":0,"2026-09-11":0,"2026-09-12":0,"2026-09-13":0,"2026-09-14":0,"2026-09-15":0,"2026-09-16":0,"2026-09-17":0,"2026-09-18":0,"2026-09-19":0,"2026-09-20":0,"2026-09-21":0,"2026-09-22":0,"2026-09-23":0,"2026-09-24":0,"2026-09-25":0,"2026-09-26":0,"2026-09-27":0,"2026-09-28":0,"2026-09-29":0,"2026-09-30":0,"2026-10-01":0,"2026-10-02":0,"2026-10-03":0,"2026-10-04":0,"2026-10-05":0,"2026-10-06":0,"2026-10-07":0,"2026-10-08":0,"2026-10-09":0,"2026-10-10":0,"2026-10-11":0,"2026-10-12":0,"2026-10-13":0,"2026-10-14":0,"2026-10-15":0}},{"slug":"discord-bot","name":"Discord Bot","days":{"2026-10-14":145,"2026-10-15":0}}]}</script>
+    <script>
+      (function () {
+        var raw = document.getElementById("uptime-data");
+        var data = JSON.parse(raw.textContent);
+        var months = data.months;
+        var services = data.services;
+        if (!months.length || !services.length) return;
+
+        var select = document.getElementById("service");
+        var label = document.getElementById("window-label");
+        var holder = document.getElementById("months");
+        var older = document.getElementById("older");
+        var newer = document.getElementById("newer");
+        var perWindow = 3;
+
+        var params = new URLSearchParams(location.search);
+        var slug = params.get("service");
+        if (!services.some(function (s) { return s.slug === slug; })) slug = services[0].slug;
+        select.value = slug;
+        // offset 0 is the window ending with this month; 1 is the one before.
+        var offset = Math.max(0, parseInt(params.get("page") || "1", 10) - 1) || 0;
+
+        function monthLabel(key) {
+          var d = new Date(key + "-01T00:00:00Z");
+          return d.toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+        }
+
+        function windowFor(off) {
+          var end = months.length - off * perWindow;
+          return months.slice(Math.max(0, end - perWindow), Math.max(0, end));
+        }
+
+        function stateFor(minutesDown) {
+          var uptime = Math.max(0, (1440 - minutesDown) / 1440);
+          if (uptime >= 1) return "up";
+          if (uptime >= 0.99) return "minor";
+          if (uptime >= 0.95) return "moderate";
+          if (uptime >= 0.8) return "major";
+          return "down";
+        }
+
+        function render() {
+          var service = services.filter(function (s) { return s.slug === slug; })[0];
+          var keys = windowFor(offset);
+          holder.innerHTML = "";
+
+          keys.forEach(function (key) {
+            var first = new Date(key + "-01T00:00:00Z");
+            var daysInMonth = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth() + 1, 0)).getUTCDate();
+            var monitored = 0;
+            var down = 0;
+            var cells = "";
+
+            for (var pad = 0; pad < first.getUTCDay(); pad++) cells += '<span class="cell cell-pad"></span>';
+            for (var day = 1; day <= daysInMonth; day++) {
+              var dayKey = key + "-" + String(day).padStart(2, "0");
+              var at = new Date(dayKey + "T00:00:00Z");
+              if (at > new Date()) { cells += '<span class="cell cell-pad"></span>'; continue; }
+              if (!(dayKey in service.days)) {
+                cells += '<span class="cell cell-nodata" title="' + dayKey + ': not monitored"></span>';
+                continue;
+              }
+              var minutes = service.days[dayKey];
+              monitored += 1440;
+              down += minutes;
+              var note = minutes === 0 ? "no downtime" : "down for " + minutes + " minutes";
+              cells += '<span class="cell cell-' + stateFor(minutes) + '" title="' + dayKey + ": " + note + '"></span>';
+            }
+
+            var pct = monitored === 0 ? null : ((monitored - down) / monitored) * 100;
+            var section = document.createElement("section");
+            section.className = "month";
+            section.innerHTML =
+              '<header class="month-head"><h3>' + monthLabel(key) + "</h3><span>" +
+              (pct === null ? "no data" : pct.toFixed(2) + "%") +
+              '</span></header><div class="grid">' + cells + "</div>";
+            holder.appendChild(section);
+          });
+
+          label.textContent = keys.length
+            ? keys.length === 1
+              ? monthLabel(keys[0])
+              : monthLabel(keys[0]) + " to " + monthLabel(keys[keys.length - 1])
+            : "";
+          older.disabled = (offset + 1) * perWindow >= months.length;
+          newer.disabled = offset === 0;
+
+          var next = new URLSearchParams();
+          next.set("service", slug);
+          if (offset > 0) next.set("page", String(offset + 1));
+          history.replaceState(null, "", location.pathname + "?" + next.toString());
+        }
+
+        select.addEventListener("change", function () { slug = select.value; offset = 0; render(); });
+        older.addEventListener("click", function () { offset += 1; render(); });
+        newer.addEventListener("click", function () { offset = Math.max(0, offset - 1); render(); });
+        render();
+      })();
+    </script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>
+      Last checked Oct 15, 19:32 UTC. All times UTC.<br>
+      Questions about the website, mobile app or bot? Ask in our Discord.
+    </p>
+    <nav>
+      <a href="https://www.linespolice-cad.com">Lines Police CAD</a>
+      <a href="https://discord.gg/Y9ytW2ZMp4">Discord</a>
+      <a href="https://github.com/Linesmerrill/police-cad-status">Monitoring data</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="tip" role="status" aria-live="off" hidden>
+  <p class="tip-date"></p>
+  <p class="tip-note"></p>
+</div>
+
+<script>
+  // The toggle flips the current appearance, whether that came from the system
+  // or from an earlier choice, and remembers it.
+  (function () {
+    var button = document.querySelector(".theme-toggle");
+    if (!button) return;
+    var root = document.documentElement;
+    var dark = window.matchMedia("(prefers-color-scheme: dark)");
+    var isDark = function () {
+      return root.dataset.theme ? root.dataset.theme === "dark" : dark.matches;
+    };
+    var label = function () {
+      button.setAttribute("aria-label", isDark() ? "Switch to light appearance" : "Switch to dark appearance");
+    };
+    button.addEventListener("click", function () {
+      root.dataset.theme = isDark() ? "light" : "dark";
+      try {
+        localStorage.setItem("lpc-status-theme", root.dataset.theme);
+      } catch (e) {}
+      label();
+    });
+    dark.addEventListener("change", label);
+    label();
+  })();
+
+  // One tooltip, moved to whichever bar is under the pointer. The text is on
+  // the bar itself, so this only positions and shows it; a bar near an edge is
+  // nudged back inside the viewport rather than hanging off it.
+  (function () {
+    var tip = document.querySelector(".tip");
+    if (!tip) return;
+    var dateEl = tip.querySelector(".tip-date");
+    var noteEl = tip.querySelector(".tip-note");
+
+    function show(bar) {
+      dateEl.textContent = bar.dataset.date || "";
+      noteEl.textContent = bar.dataset.note || "";
+      tip.hidden = false;
+      var b = bar.getBoundingClientRect();
+      var t = tip.getBoundingClientRect();
+      var left = b.left + b.width / 2 - t.width / 2;
+      left = Math.min(Math.max(8, left), window.innerWidth - t.width - 8);
+      var top = b.top - t.height - 10;
+      var below = top < 8;
+      if (below) top = b.bottom + 10;
+      tip.classList.toggle("tip-below", below);
+      tip.style.left = Math.round(left + window.scrollX) + "px";
+      tip.style.top = Math.round(top + window.scrollY) + "px";
+      tip.style.setProperty("--arrow", Math.round(b.left + b.width / 2 + window.scrollX - left - window.scrollX) + "px");
+    }
+
+    function hide() {
+      tip.hidden = true;
+    }
+
+    document.addEventListener("mouseover", function (event) {
+      var bar = event.target.closest(".bar");
+      if (bar) show(bar);
+    });
+    document.addEventListener("mouseout", function (event) {
+      if (event.target.closest(".bar")) hide();
+    });
+    window.addEventListener("scroll", hide, { passive: true });
+  })();
+</script>
+</body>
+</html>

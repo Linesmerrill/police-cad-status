@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incident history, page 3</title>
+<meta name="description" content="Every incident recorded for Lines Police CAD, by month.">
+<meta name="theme-color" content="#faf9f5">
+<meta property="og:title" content="Incident history, page 3">
+<meta property="og:description" content="Every incident recorded for Lines Police CAD, by month.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../assets/lpc-logo.png">
+<link rel="apple-touch-icon" href="../../assets/lpc-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../styles.css?v=1792096135693">
+<script>
+  // Applied before the first paint so a dark-mode visitor never sees a white
+  // flash. The page follows the system setting until someone picks a side.
+  try {
+    var saved = localStorage.getItem("lpc-status-theme");
+    if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to service status</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="../../">
+      <img class="brand-logo" src="../../assets/lpc-logo.png" alt="" width="40" height="40">
+      <span class="brand-name">Lines Police CAD <span>Status</span></span>
+      <span class="brand-dot mark-up" aria-hidden="true"></span>
+    </a>
+    <nav class="masthead-nav">
+      <a href="https://www.linespolice-cad.com">Main site</a>
+      <a class="btn" href="https://discord.gg/Y9ytW2ZMp4">Discord support</a>
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.3 5.3l1.9 1.9M16.8 16.8l1.9 1.9M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.4 8.4 0 1 0 10.4 10.4z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap">
+    <a class="back" href="../../">Current status</a>
+    
+    <nav class="tabs">
+      <a class="tab tab-on" href="../../history/" aria-current="page">Incidents</a>
+      <a class="tab" href="../../uptime/">Uptime</a>
+    </nav>
+
+    <div class="controls">
+      <details class="filter">
+        <summary>Filter services</summary>
+        <div class="filter-menu">
+          <label><input type="checkbox" value="police-cad-frontend" checked> Police CAD Frontend</label>
+          <label><input type="checkbox" value="police-cad-api" checked> Police CAD API</label>
+          <label><input type="checkbox" value="discord-bot" checked> Discord Bot</label>
+        </div>
+      </details>
+      <div class="window-nav">
+        <span class="disabled" aria-hidden="true">&#8249;</span>
+        <span>February 2026 to April 2026</span>
+        <a href="../../history/2/" aria-label="Later months">&#8250;</a>
+      </div>
+    </div>
+
+    <div id="history">
+      <section class="month-incidents">
+        <h3>April 2026</h3>
+        
+        <article class="incident" data-slug="police-cad-frontend">
+          <h4>Police CAD Frontend is down</h4>
+          <p class="incident-meta">
+            <span class="outcome">Resolved after 47 minutes</span>
+            <span>Police CAD Frontend</span>
+            <span>Apr 20, 19:39 UTC to 20:26 UTC</span>
+          </p>
+          <ul class="updates">
+            <li>
+              <p><span class="update-label">Resolved</span> Police CAD Frontend is back up in 7ea07b4 after 46 minutes.</p>
+              <time>Apr 20, 20:26 UTC</time>
+            </li>
+          </ul>
+          <a class="incident-link" href="https://github.com/Linesmerrill/police-cad-status/issues/4">Incident #4</a>
+        </article>
+        <article class="incident" data-slug="police-cad-frontend">
+          <h4>Police CAD Frontend down for ~36 minutes</h4>
+          <p class="incident-meta">
+            <span class="outcome">Resolved after 7 minutes</span>
+            <span>Police CAD Frontend</span>
+            <span>Apr 13, 21:17 UTC to 21:24 UTC</span>
+          </p>
+          <ul class="updates">
+            <li>
+              <p>Post-Mortem: Police CAD Frontend Outage — April 13, 2026</p>
+              <time>Apr 13, 21:23 UTC</time>
+            </li>
+            <li>
+              <p>Incident resolved. v1273 deployed successfully at 2:13 PM PDT. All services operational.</p>
+              <time>Apr 13, 21:18 UTC</time>
+            </li>
+          </ul>
+          <a class="incident-link" href="https://github.com/Linesmerrill/police-cad-status/issues/2">Incident #2</a>
+        </article>
+        
+      </section>
+      <section class="month-incidents">
+        <h3>March 2026</h3>
+        <p class="muted">No incidents reported this month.</p>
+      </section>
+      <section class="month-incidents">
+        <h3>February 2026</h3>
+        
+        <article class="incident">
+          <h4>Status monitoring may be delayed due to GitHub Actions outage</h4>
+          <p class="incident-meta">
+            <span class="outcome">Resolved after 4h 32m</span>
+            
+            <span>Feb 2, 20:52 UTC to 01:25 UTC</span>
+          </p>
+          <ul class="updates">
+            <li>
+              <p>All Systems Operational</p>
+              <time>Feb 3, 01:25 UTC</time>
+            </li>
+            <li>
+              <p><span class="update-label">Update</span> Our upstream provider has applied a mitigation to address queuing and job failures on hosted runners.</p>
+              <time>Feb 2, 23:27 UTC</time>
+            </li>
+            <li>
+              <p><span class="update-label">Update</span> We continue to investigate failures impacting GitHub Actions hosted-runner jobs.</p>
+              <time>Feb 2, 22:13 UTC</time>
+            </li>
+            <li>
+              <p><span class="update-label">Update</span> We continue to investigate failures impacting GitHub Actions hosted-runner jobs.</p>
+              <time>Feb 2, 22:05 UTC</time>
+            </li>
+          </ul>
+          <a class="incident-link" href="https://github.com/Linesmerrill/police-cad-status/issues/1">Incident #1</a>
+        </article>
+        
+      </section></div>
+
+    <p class="muted page-count">Page 3 of 3.</p>
+
+    <script>
+      (function () {
+        // ?page=N is the URL people tend to type; send them to the page itself.
+        var asked = new URLSearchParams(location.search).get("page");
+        var here = 3;
+        if (asked && Number(asked) !== here && Number(asked) >= 1) {
+          var target = Number(asked) === 1 ? "../../history/" : "../../history/" + Number(asked) + "/";
+          location.replace(target);
+          return;
+        }
+
+        // The filter hides incidents in the page rather than reloading it, so
+        // without JavaScript every incident is simply shown.
+        var boxes = Array.prototype.slice.call(document.querySelectorAll(".filter input"));
+        function apply() {
+          var on = boxes.filter(function (b) { return b.checked; }).map(function (b) { return b.value; });
+          document.querySelectorAll(".incident[data-slug]").forEach(function (card) {
+            card.hidden = on.indexOf(card.dataset.slug) === -1;
+          });
+          document.querySelectorAll(".month-incidents").forEach(function (section) {
+            var any = section.querySelector(".incident:not([hidden])");
+            var empty = section.querySelector(".filtered-empty");
+            if (!any && !empty) {
+              var p = document.createElement("p");
+              p.className = "muted filtered-empty";
+              p.textContent = "No incidents for the selected services.";
+              section.appendChild(p);
+            } else if (any && empty) {
+              empty.remove();
+            }
+          });
+        }
+        boxes.forEach(function (box) { box.addEventListener("change", apply); });
+      })();
+    </script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>
+      Last checked Oct 15, 19:32 UTC. All times UTC.<br>
+      Questions about the website, mobile app or bot? Ask in our Discord.
+    </p>
+    <nav>
+      <a href="https://www.linespolice-cad.com">Lines Police CAD</a>
+      <a href="https://discord.gg/Y9ytW2ZMp4">Discord</a>
+      <a href="https://github.com/Linesmerrill/police-cad-status">Monitoring data</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="tip" role="status" aria-live="off" hidden>
+  <p class="tip-date"></p>
+  <p class="tip-note"></p>
+</div>
+
+<script>
+  // The toggle flips the current appearance, whether that came from the system
+  // or from an earlier choice, and remembers it.
+  (function () {
+    var button = document.querySelector(".theme-toggle");
+    if (!button) return;
+    var root = document.documentElement;
+    var dark = window.matchMedia("(prefers-color-scheme: dark)");
+    var isDark = function () {
+      return root.dataset.theme ? root.dataset.theme === "dark" : dark.matches;
+    };
+    var label = function () {
+      button.setAttribute("aria-label", isDark() ? "Switch to light appearance" : "Switch to dark appearance");
+    };
+    button.addEventListener("click", function () {
+      root.dataset.theme = isDark() ? "light" : "dark";
+      try {
+        localStorage.setItem("lpc-status-theme", root.dataset.theme);
+      } catch (e) {}
+      label();
+    });
+    dark.addEventListener("change", label);
+    label();
+  })();
+
+  // One tooltip, moved to whichever bar is under the pointer. The text is on
+  // the bar itself, so this only positions and shows it; a bar near an edge is
+  // nudged back inside the viewport rather than hanging off it.
+  (function () {
+    var tip = document.querySelector(".tip");
+    if (!tip) return;
+    var dateEl = tip.querySelector(".tip-date");
+    var noteEl = tip.querySelector(".tip-note");
+
+    function show(bar) {
+      dateEl.textContent = bar.dataset.date || "";
+      noteEl.textContent = bar.dataset.note || "";
+      tip.hidden = false;
+      var b = bar.getBoundingClientRect();
+      var t = tip.getBoundingClientRect();
+      var left = b.left + b.width / 2 - t.width / 2;
+      left = Math.min(Math.max(8, left), window.innerWidth - t.width - 8);
+      var top = b.top - t.height - 10;
+      var below = top < 8;
+      if (below) top = b.bottom + 10;
+      tip.classList.toggle("tip-below", below);
+      tip.style.left = Math.round(left + window.scrollX) + "px";
+      tip.style.top = Math.round(top + window.scrollY) + "px";
+      tip.style.setProperty("--arrow", Math.round(b.left + b.width / 2 + window.scrollX - left - window.scrollX) + "px");
+    }
+
+    function hide() {
+      tip.hidden = true;
+    }
+
+    document.addEventListener("mouseover", function (event) {
+      var bar = event.target.closest(".bar");
+      if (bar) show(bar);
+    });
+    document.addEventListener("mouseout", function (event) {
+      if (event.target.closest(".bar")) hide();
+    });
+    window.addEventListener("scroll", hide, { passive: true });
+  })();
+</script>
+</body>
+</html>
