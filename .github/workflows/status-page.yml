@@ -1,0 +1,64 @@
+# Builds and publishes the status page at status.linespolice-cad.com.
+#
+# This replaces Upptime's own Static Site CI as the thing that deploys the
+# page. Upptime still performs the checks, commits the history and opens the
+# incident issues; status-page/build.mjs renders those into our own page.
+# Upptime's site.yml is parked by a yearly cron in .upptimerc.yml rather than
+# deleted, so the weekly template update has something to regenerate and
+# nothing to fight over. The build lives in status-page/ and not site/, which
+# is the directory Upptime's own site command creates.
+#
+# The API's statusPageDispatch job asks for this run (repository_dispatch,
+# status_page) whenever a check has changed the data, because GitHub throttles
+# scheduled workflows on a quiet repository down to a few runs a day. The
+# hourly schedule below is only a backstop for when that is not running.
+name: Status Page
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [status_page]
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches: [master]
+    paths:
+      - "status-page/**"
+      - ".github/workflows/status-page.yml"
+
+concurrency:
+  group: ${{ github.repository }}-status-page
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  publish:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build the page
+        run: node status-page/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ github.token }}
+          publish_dir: status-page/dist
+          cname: status.linespolice-cad.com
+          force_orphan: "false"
+          user_name: "Upptime Bot"
+          user_email: "73812536+upptime-bot@users.noreply.github.com"

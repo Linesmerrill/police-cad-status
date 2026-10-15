@@ -2,7 +2,10 @@ owner: Linesmerrill
 repo: police-cad-status
 
 workflowSchedule:
-  staticSite: "0 2 * * *"  # Rebuild status page daily at 2 AM UTC
+  # Upptime's own status site is no longer published: .github/workflows/
+  # status-page.yml builds ours from the same data. Parked rather than
+  # deleted so the weekly template update has something to regenerate.
+  staticSite: "0 2 1 1 *"
   responseTime: "0 3 * * *"  # Record response time data daily at 3 AM UTC
   graphs: "0 4 * * *"  # Regenerate graphs daily at 4 AM UTC
   updateTemplate: "0 5 * * 1"  # Track upstream weekly so the pinned action can't go stale
