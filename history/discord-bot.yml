@@ -1,7 +1,7 @@
 url: https://police-cad-app-api-bc6d659b60b3.herokuapp.com/health/discord-bot
 status: down
-code: 404
-responseTime: 19
-lastUpdated: 2026-10-14T16:55:37.057Z
+code: 503
+responseTime: 23
+lastUpdated: 2026-10-15T07:46:51.766Z
 startTime: 2026-10-14T16:03:57.452Z
 generator: Upptime <https://github.com/upptime/upptime>
