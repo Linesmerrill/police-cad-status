@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
-    "time": 348,
-    "timeDay": 246,
-    "timeWeek": 148,
-    "timeMonth": 169,
-    "timeYear": 348,
+    "time": 347,
+    "timeDay": 235,
+    "timeWeek": 173,
+    "timeMonth": 170,
+    "timeYear": 347,
     "dailyMinutesDown": {
       "2026-04-13": 7,
       "2026-04-20": 47
@@ -32,9 +32,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.99%",
     "time": 168,
-    "timeDay": 219,
-    "timeWeek": 123,
-    "timeMonth": 113,
+    "timeDay": 229,
+    "timeWeek": 152,
+    "timeMonth": 116,
     "timeYear": 168,
     "dailyMinutesDown": {
       "2026-06-06": 35
@@ -45,20 +45,20 @@
     "url": "https://police-cad-app-api-bc6d659b60b3.herokuapp.com/health/discord-bot",
     "icon": "https://icons.duckduckgo.com/ip3/police-cad-app-api-bc6d659b60b3.herokuapp.com.ico",
     "slug": "discord-bot",
-    "status": "down",
-    "uptime": "99.67%",
-    "uptimeDay": "99.83%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "99.66%",
-    "uptimeYear": "99.67%",
-    "time": 117,
-    "timeDay": 194,
-    "timeWeek": 133,
-    "timeMonth": 117,
-    "timeYear": 117,
+    "status": "up",
+    "uptime": "99.22%",
+    "uptimeDay": "85.95%",
+    "uptimeWeek": "97.99%",
+    "uptimeMonth": "99.21%",
+    "uptimeYear": "99.22%",
+    "time": 124,
+    "timeDay": 237,
+    "timeWeek": 166,
+    "timeMonth": 124,
+    "timeYear": 124,
     "dailyMinutesDown": {
       "2026-10-14": 145,
-      "2026-11-14": 2
+      "2026-11-14": 202
     }
   }
 ]
